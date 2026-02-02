@@ -1,2 +1,4 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec cp -u -p {} .. \;
+for f in *.html
+do cp -u -p "$f" ..
+done
