@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec cp -u -p {} .. + -exec ls -l ../{} +
+find . -maxdepth 1 -name "*.html" -exec cp -up {} .. \; -exec ls -l ../{} \;
