@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec cp -up -t .. {} +; find .. -maxdepth 1 -name "*.html" -exec ls -l {} + | cut -d" " -f1-5,9-
+find . -maxdepth 1 -name "*.html" -exec cp -up -t .. {} + -exec ls -l {} + | xargs -I {} ls -l ../{} | cut -d" " -f1-5,9-
