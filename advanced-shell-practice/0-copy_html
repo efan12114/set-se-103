@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec cp -up -t .. {} + -exec sh -c "ls -l ../\"\$@\"" _ {} +
+find . -maxdepth 1 -name "*.html" -exec cp -up -t .. {} + -exec sh -c "for f in \"\$@\"; do ls -l \"../\$f\" | tr -s \" \" | cut -d\" \" -f1,2,3,4,5,9-; done" _ {} +
