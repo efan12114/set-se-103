@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "*.html" -exec cp -up {} .. \;
+find . -maxdepth 1 -name "*.html" -exec cp -up -t .. {} + -exec ls -l ../{} + | sed "s/[^ ]* *[^ ]* *[^ ]* *[^ ]* *[^ ]* *[^ ]* *[^ ]* *[^ ]* //"
